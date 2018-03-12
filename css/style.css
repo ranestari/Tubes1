@@ -12,6 +12,7 @@ form{
 .btn{
 	background-color: black;
 	color: white;
+	margin-top: : 5px;
 
 	}
 h2{
@@ -24,6 +25,10 @@ h2{
     width: 90%;
 }
 .imgDetail{
-	width: 100%;
+	width: 75%;
 	height: 100%;
+}
+.detailDescription{
+	border: 1px solid black;
+
 }
