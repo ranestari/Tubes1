@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Konfirmasi Pembayaran</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/konfirmasiPembayaran.css">
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+
+		
+			<form class="form-horizontal">
+				<h2>Konfirmasi Pembayaran</h2>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">No Order:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input  type="text" name="noOrder" id="noOrder">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Bank Tujuan:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<select id="konfirmasiBankTujuan">
+							<option selected="">--Pilih Bank--</option>
+							<option>Mandiri</option>
+							<option>BCA</option>
+							<option>BNI</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Bank Anda:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input type="text" name="konfirmasiBankAsal" id="konfirmasiBankAsal">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Rekening atas Nama:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input type="text" name="namaPengirim" id="namaPengirim">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Nominal Transfer:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input type="text" name="nominalTransfer" id="nominalTransfer">
+						<small id="nominalHelp" class="form-text text-muted">exp: 50000</small>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Tanggal Transfer:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input type="date" name="tanggalTransfer" id="tanggalTransfer">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="control-label">Bukti Transfer:</label>
+					</div>
+					<div class="form-group col-md-6">
+						<input style="border:none;" type="file" name="buktiTransfer" id="buktiTransfer">
+						<small id="nominalHelp" class="form-text text-muted">jpg,pdf,jpeg</small>
+					</div>
+				</div>
+				<div class="form-row">
+					<button type="submit" class="btn center-block">Konfirmasi</button>
+				</div>
+			</form>
+		
+
+	</div>
+
+</body>
+</html>

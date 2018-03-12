@@ -1,0 +1,25 @@
+input,select{
+	border-bottom: 1px solid black;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	width: 250px;
+}
+form{
+	font-family: Georgia;
+
+}
+.btn{
+	background-color: black;
+	color: white;
+
+	}
+h2{
+	padding-bottom: 15px;
+	text-align: center;
+	
+}
+ .form-horizontal .control-label{
+    text-align: left;
+    width: 90%;
+}
