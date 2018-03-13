@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Katalog Hafiz</title>
+
+  link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Bootstrap CSS Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS Library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+	<!--JQuery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	
+	<!--DataTable-->
+	<script>
+		$(document).ready(function() { 
+			$('#catalogTable').DataTable( {
+				"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+			} ); 
+		} );
+	</script>
+
+	<!--JavaScript-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		body{
+			height: 100%;
+			width: 100%;
+		}
+		nav{
+			font-family: calibri;
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	</style>
+
+</head>
+<body>
+	
+  	<header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" width="30" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar1">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Products</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Tops</a>
+              <a class="dropdown-item" href="#">Bottoms</a>
+            </div>
+          </li>
+        </ul>
+        
+        <form class="form-inline my-2 my-md-0" action="/action_page.php" method="GET">
+          <input class="form-control" type="text" placeholder="Search"/><i id="filtersubmit" class="fa fa-search"></i>
+        </form>
+        <button type="button" class="btn btn-default" aria-label="Cart">
+        <i class="fa fa-cart-plus"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="container-fluid flex-grow content">
+  		<table id="catalogTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                
+        </thead>
+        <tbody >
+            <tr>
+                <td><img class="imgcart" src="img/joggerpants.jpg"></td>
+                <td>JoggerPants</td>
+                <td>IDR 75000</td>
+                <td>2</td>
+                <td>150000</td>
+                
+            </tr>
+           
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+  </main>
+
+  <footer class="bg-dark text-white">
+    <div class="container-fluid">
+          <div class="row">
+              <div class="col">
+                <nav class="nav">
+            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link text-white" href="#">Contact</a>
+            <a class="nav-link text-white" href="#">Help</a>
+          </nav>
+              </div>
+          </div>
+      </div>
+  </footer>
+  	</div>
+</body>
+</html>
