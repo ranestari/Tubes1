@@ -20,7 +20,118 @@
 
 </head>
 <body>
-	
+	<header>
+		<nav class="navbar navbar-expand navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="img/logo.png" width="30" height="30" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbar1">
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Products</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Tops</a>
+							<a class="dropdown-item" href="#">Bottoms</a>
+						</div>
+					</li>
+				</ul>
+				
+				<form class="form-inline my-2 my-md-0" action="/action_page.php" method="GET">
+					<input class="form-control" type="text" placeholder="Search"/><i id="filtersubmit" class="fa fa-search"></i>
+				</form>
+				<button type="button" class="btn btn-default" aria-label="Cart">
+				<i class="fa fa-cart-plus"></i>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main" class="container-fluid flex-grow content">
+
+		<form>
+			<h2 class="text-center">Konfirmasi Pembayaran</h2>
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">No. Order:</label>
+				<div class="col-sm-6">
+					<input type="text" name="noOrder" id="noOrder">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Bank Tujuan:</label>
+				<div class="col-sm-6">
+					<select id="bankTujuan" class="bankTujuan">
+						<option selected="">--Pilih Bank--</option>
+						<option>Mandiri</option>
+						<option>BCA</option>
+						<option>BNI</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Bank Asal:</label>
+				<div class="col-sm-6">
+					<input type="text" name="bankAsal" id="bankAsal">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Rekening Atas Nama:</label>
+				<div class="col-sm-6">
+					<input type="text" name="namaRekening" id="namaRekening">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Nominal Transfer:</label>
+				<div class="col-sm-6">
+					<input type="text" name="nominalTransfer" id="nominalTransfer"><br>
+					<small>exp:50000</small>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Tanggal Transfer:</label>
+				<div class="col-sm-6">
+					<input type="date" name="tanggalTransfer" id="tanggalTransferr">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="col-sm-6 col-form-label">Bukti Transfer:</label>
+				<div class="col-sm-6">
+					<input type="file" name="buktiTransfer" id="buktiTransfer" style="border: none;"><br>
+					<small>jpg,jpeg,pdf</small>
+				</div>
+			</div>
+			<div class="text-center">
+     			<button type="submit" class="btn center-block">Konfirmasi</button>
+     		</div>
+		</form>
+	</main>
+
+	<footer class="bg-dark text-white">
+		<div class="container-fluid">
+	        <div class="row">
+	            <div class="col">
+	            	<nav class="nav">
+						<a class="nav-link text-white" href="#">About</a>
+						<a class="nav-link text-white" href="#">Contact</a>
+						<a class="nav-link text-white" href="#">Help</a>
+					</nav>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
 
 </body>
 </html>
