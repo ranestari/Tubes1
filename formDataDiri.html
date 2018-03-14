@@ -1,97 +1,135 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title> </title>
+
+
+		<head>
+			<title> </title>
+			<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- Bootstrap CSS Library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 	<!-- CSS Style -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<!-- Bootstrap JS Library -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<!-- Font Awesome -->
+	<!--Font awesome-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">
-		.paymentRadio{
-			width: 20px;
-		}
+		</head>
+		<body>
+			<header>
+				<nav class="navbar navbar-expand navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="img/logo.png" width="30" height="30" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-		.order{
-			text-decoration: none;
-			width: 50%;
-			background-color: black;
-		}
-	</style>
-</head>
-<body>
-	<header>
-	</header>
-	<main>
-		<div class="container">
-			<div class="col-md-5 mt-xl-3">
-				<center><h1>Place Order</h1></center>
-				<table width="100%">
-					<tr>
-						<td><label>Nama</label></td>
-						<td><input type="text" class="form-control" id="nama"></td>
-					</tr>
-					<tr>
-						<td><label>Mobile Phone</label></td>
-						<td><input type="text" class="form-control" id="phone"></td>
-					</tr>
-					<tr>
-						<td><label>Address</label></td>
-						<td><input type="text" class="form-control" id="address"></td>
-					</tr>
-					<tr>
-						<td><label>Country</label></td>
-						<td>
-							<select class="form-control" id="country" placeholder="- Select Country -">
-								<option selected="">--Pilih Negara--</option>
-								<option> Indonesia </option>
-								<option> Australia </option>
-								<option> Singapura </option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td><label>Province</label></td>
-						<td><input type="text" class="form-control" id="province"></td>
-					</tr>
-					<tr>
-						<td><label>City</label></td>
-						<td><input type="text" class="form-control" id="city"></td>
-					</tr>
-					<tr>
-						<td><label>Postal Code</label></td>
-						<td><input type="text" class="form-control" id="pCode"></td>
-					</tr>
-					<tr>
-						<td><label>Email</label></td>
-						<td><input type="email" class="form-control" id="email"></td>
-					</tr>
-					<tr>
-						<td>
-							<label>Payment Method </label>
-						</td>
-						<td>
-							<div class="radio">
-								<label><input type="radio" name="payment" class="paymentRadio"> Bank Transfer</label> <br>
-								<label><input type="radio" name="payment" class="paymentRadio"> COD </label>
-							</div>								
-						</td>
-					</tr>
-				</table>
-				<center><button type="order" class="btn btn-primary order">Place Order</button></center>
+			<div class="collapse navbar-collapse" id="navbar1">
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Products</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Tops</a>
+							<a class="dropdown-item" href="#">Bottoms</a>
+						</div>
+					</li>
+				</ul>
+				
+				<form class="form-inline my-2 my-md-0" action="/action_page.php" method="GET">
+					<input class="form-control " type="text" placeholder="Search"/><i id="filtersubmit" class="fa fa-search"></i>
+				</form>
+				<button type="button" class="btn btn-default" aria-label="Cart">
+				<i class="fa fa-cart-plus"></i>
+				</button>
 			</div>
-		</div>
-	</main>
-	<footer>
-		
-	</footer>
-</body>
+		</nav>
+
+			</header>
+			<main role="main" class="container-fluid flex-grow content">
+				<div class="container">
+					<div class="col-md-5 mt-xl-3">
+					<form>
+						<center><h2>Place Order</h2></center>
+						<table width="100%">
+							<tr>
+								<td><label>Nama</label></td>
+								<td><input class="formInput" type="text" class="form-control" id="nama"></td>
+							</tr>
+							<tr>
+								<td><label>Mobile Phone</label></td>
+								<td><input class="formInput" type="text" class="form-control" id="phone"></td>
+							</tr>
+							<tr>
+								<td><label>Address</label></td>
+								<td><input class="formInput" type="text" class="form-control" id="address"></td>
+							</tr>
+							<tr>
+								<td><label>Country</label></td>
+								<td>
+									<select class="formInput" class="form-control" id="country" placeholder="- Select Country -">
+										<option selected="">--Pilih Negara--</option>
+										<option> Indonesia </option>
+										<option> Australia </option>
+										<option> Singapura </option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Province</label></td>
+								<td><input  class="formInput" type="text" class="form-control" id="province"></td>
+							</tr>
+							<tr>
+								<td><label>City</label></td>
+								<td><input class="formInput" type="text" class="form-control" id="city"></td>
+							</tr>
+							<tr>
+								<td><label>Postal Code</label></td>
+								<td><input class="formInput" type="text" class="form-control" id="pCode"></td>
+							</tr>
+							<tr>
+								<td><label>Email</label></td>
+								<td><input class="formInput" type="email" class="form-control" id="email"></td>
+							</tr>
+							<tr>
+								<td>
+									<label>Payment Method </label>
+								</td>
+								<td>
+									<div class="radio">
+										<label><input type="radio" name="payment" class="paymentRadio"> Bank Transfer</label> <br>
+										<label><input type="radio" name="payment" class="paymentRadio"> COD </label>
+									</div>								
+								</td>
+							</tr>
+						</table>
+						<center><button type="order" class="btn center-block order">Place Order</button></center>
+						</form>
+					</div>
+				</div>
+			</main>
+			<footer class="bg-dark text-white">
+			<div class="container-fluid">
+	        <div class="row">
+	            <div class="col">
+	            	<nav class="nav">
+						<a class="nav-link text-white" href="#">About</a>
+						<a class="nav-link text-white" href="#">Contact</a>
+						<a class="nav-link text-white" href="#">Help</a>
+					</nav>
+	            </div>
+	        </div>
+	    	</div>
+			</footer>
+		</body>
+
 </html>

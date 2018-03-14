@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Keranjang</title>
+<<<<<<< HEAD
 	<!-- Bootstrap CSS Library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- CSS Style -->
@@ -14,6 +15,26 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Data Table Plugin -->
+=======
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Bootstrap CSS Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS Library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+>>>>>>> refs/remotes/origin/master
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.16/api/sum().js"></script>
@@ -87,15 +108,16 @@
 		</nav>
 	</header>
 
-	<main role="main" class="container-fluid flex-grow content">
+	<main style="padding-top: 10px;" role="main" class="container-fluid flex-grow content">
 		<table id="catalogTable" width="100%" cellspacing="0">
 			<thead>
 				<tr>
-					<th>Picture</th>
+					<th width="150px">Picture</th>
 					<th width="150px">Name</th>
 					<th width="150px">Price</th>
 					<th width="100px">Quantity</th>
 					<th width="150px">Sub Total</th>
+          <th width="150px"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -103,15 +125,21 @@
 					<td><img class="imgcart" src="img/joggerpants.jpg"></td>
 					<td>JoggerPants</td>
 					<td>75000</td>
-					<td>2</td>
+					<td><button id="quantityMin" class="btn quantity " type="button" style="width: 30px;height: 30px;">-</button> 
+                  <input  id="quantityText" type="text" type="text" name="quantityText" value="2"  style="width: 30px;height: 30px;text-align: center;">
+                  <button id="quantityPlus" class="btn quantity" type="button" style="width: 30px;height: 30px;">+</button></td>
 					<td>150000</td>
+          <td><button><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
 					<td><img class="imgcart" src="img/jeans.jpg"></td>
 					<td>Jeans</td>
 					<td>100000</td>
-					<td>1</td>
+					<td><button id="quantityMin" class="btn quantity " type="button" style="width: 30px;height: 30px;">-</button> 
+                  <input  id="quantityText" type="text" type="text" name="quantityText" value="1"  style="width: 30px;height: 30px;text-align: center;">
+                  <button id="quantityPlus" class="btn quantity" type="button" style="width: 30px;height: 30px;">+</button></td>
 					<td>100000</td>
+          <td><button><i class="fa fa-trash"></i></button></td>
 				</tr>
 			</tbody>
 			<tfoot>
