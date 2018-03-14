@@ -3,7 +3,7 @@
 <head>
 	<title>Keranjang</title>
 
-  link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- Bootstrap CSS Library -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -97,15 +97,20 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Amount</th>
-                
+                <th></th>
         </thead>
         <tbody >
             <tr>
                 <td><img class="imgcart" src="img/joggerpants.jpg"></td>
-                <td>JoggerPants</td>
-                <td>IDR 75000</td>
-                <td>2</td>
-                <td>150000</td>
+                <td><p>JoggerPants</p></td>
+                <td><p>IDR 75000</p></td>
+                <td>
+                  <button id="quantityMin" class="btn quantity " type="button" style="width: 30px;height: 30px;">-</button> 
+                  <input  id="quantityText" type="text" type="text" name="quantityText" value="1"  style="width: 30px;height: 30px;text-align: center;">
+                  <button id="quantityPlus" class="btn quantity" type="button" style="width: 30px;height: 30px;">+</button>
+                </td>
+                <td><p>150000</p></td>
+                <td><button><i class="fa fa-trash"></i></button></td>
                 
             </tr>
            
