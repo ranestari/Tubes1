@@ -18,9 +18,25 @@ body {
 .content {
 			flex: 1 0 auto;
 		}
-.footer {
+.footer a{
+
 			flex-shrink: 0;
+			font-size: 12px;
+		 
+		    top: 5px;
+		    left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    color: white;
+		    margin-top: 10px;
+		
 		}
+.footerTitle{
+	font-size: 16px;
+	font-weight: bold;
+	margin: auto;
+	margin-bottom: 10px;
+}
 #filtersubmit {
 	    		position: relative;
 	    		z-index: 1;
@@ -31,7 +47,7 @@ body {
 	    		width: 0;
 }
 .col-form-label {
-    text-align: right;
+    /*text-align: right;*/
 
     
   }
@@ -61,5 +77,22 @@ body {
  	width: 50%;
  	height: 100%;
  }
+
+ .fa{
+ 	color:white;
+ 	font-size: 30px;
+ }
+ .nav ,.navbar{
+ 	font-family: sans-serif;
+ }
+ .social a{
+	
+	margin: auto;
+	font-size: 30px;
+	padding-top: 5%;
+
+
+ }
+
 
 
