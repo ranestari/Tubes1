@@ -23,7 +23,6 @@ body {
 			flex-shrink: 0;
 			font-size: 12px;
 		 
-		    top: 5px;
 		    left: 0;
 		    bottom: 0;
 		    width: 100%;
@@ -46,8 +45,8 @@ body {
 	    		cursor:pointer;
 	    		width: 0;
 }
-.col-form-label {
-    /*text-align: right;*/
+.control-label {
+    width: 10px;
 
     
   }
@@ -59,6 +58,8 @@ body {
  }
  form{
  	font-family: georgia;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
  }
  .imgcart{
  	width: 50%;
@@ -92,6 +93,10 @@ body {
 	padding-top: 5%;
 
 
+ }
+ iframe{
+ 	text-align: center;
+ 	align-content: center;
  }
 
 
