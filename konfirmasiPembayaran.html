@@ -36,7 +36,7 @@
 </head>
 <body>
 	<header>
-	<nav class="navbar navbar-expand-lg navbar-dark  container-fluid">
+	<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
 		<a class="navbar-brand" href="">Logo</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -48,13 +48,13 @@
 					<a class="nav-link" href="home.html">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Tops Wear</a>
+					<a class="nav-link" href="katalogBaju.html">Tops Wear</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Bottoms Wear</a>
+					<a class="nav-link" href="katalogCelana">Bottoms Wear</a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Payment Confirmation</a>
+				<li class="nav-item">
+					<a class="nav-link" href="konfirmasiPembayaran.html">Payment Confirmation</a>
 				</li>
 			</ul>
 
@@ -81,7 +81,6 @@
 		</div>
 	</nav>
 	</header>
-
 	<main role="main" class="container-fluid flex-grow content">
 				
 				<div class="container">
@@ -91,11 +90,11 @@
 						<table width="100%">
 							<tr>
 								<td><label>No.Order:</label></td>
-								<td><input  type="text"  id="nama"></td>
+								<td><input class="formInput" type="text"  id="nama" required></td>
 							</tr>
 							<tr>
 								<td><label>Bank Tujuan:</label></td>
-								<td><select id="konfirmasiBankTujuan">
+								<td><select class="formInput " id="konfirmasiBankTujuan"  required>
 										<option selected="">--Pilih Bank--</option>
 										<option>Mandiri</option>
 										<option>BCA</option>
@@ -104,35 +103,34 @@
 							</tr>
 							<tr>
 								<td><label>Your Bank:</label></td>
-								<td><input type="text" name="konfirmasiBankAsal" id="konfirmasiBankAsal"></td>
+								<td><input class="formInput" type="text" name="konfirmasiBankAsal" id="konfirmasiBankAsal" required></td>
 							</tr>
 							<tr>
 								<td><label>Card User:</label></td>
-								<td><input type="text" name="namaPengirim" id="namaPengirim"></td>
+								<td><input class="formInput " type="text" name="namaPengirim" id="namaPengirim" required></td>
 							</tr>
 							
 							<tr>
 								<td><label>Transfer Nominal:</label></td>
-								<td><input type="text" name="nominalTransfer" id="nominalTransfer">
+								<td><input class="formInput " type="text" name="nominalTransfer" id="nominalTransfer" required>
 									<small id="nominalHelp" class="form-text text-muted">exp: 50000</small></td>
 							</tr>
 							<tr>
 								<td><label>Date Transfer:</label></td>
-								<td><input type="date" name="tanggalTransfer" id="tanggalTransfer"></td>
+								<td><input class="formInput " type="date" name="tanggalTransfer" id="tanggalTransfer" required></td>
 							</tr>
 							<tr>
 								<td><label>Proof</label></td>
-								<td><input style="border:none;" type="file" name="buktiTransfer" id="buktiTransfer">
+								<td><input class="formInput " style="border:none;" type="file" name="buktiTransfer" id="buktiTransfer" required>
 								<small id="nominalHelp" class="form-text text-muted">jpg,pdf,jpeg</small></td>
 							</tr>
 						</table>
-						<center><button type="order" class="btn center-block order">Confirm</button></center>
+						<center><button  type="order" class="btn center-block order">Confirm</button></center>
 						</form>
 					</div>
 				</div>
 			</main>
 
-	<footer class="bg-dark text-white">
 		<div class="footer" id="footer">
 		<div class="container-fluid">
 			<div class="row">
@@ -177,7 +175,6 @@
 			</div>
 		</div>
 		</div>
-	</footer>
 
 
 </body>
