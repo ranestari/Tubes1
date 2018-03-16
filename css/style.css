@@ -1,7 +1,14 @@
 
 
-.btn{
+form .btn{
 	background-color: black;
+	color: white;
+	margin-top: : 5px;
+
+	}
+
+footer .btn{
+	background-color: grey;
 	color: white;
 	margin-top: : 5px;
 
@@ -19,24 +26,22 @@ body {
 			flex: 1 0 auto;
 		}
 
-
-
-.control-label {
-    
-
-    
-  }
-
- .formInput,select{
- 	border: none;
- 	border-bottom: 2px solid black;
- 	width: 170px;
+ .home{
+ 	width: 50%;
+ 	height: 100%;
  }
- form{
- 	font-family: georgia;
- 	margin-top: 10px;
- 	margin-bottom: 10px;
- }
+
+ .fa{
+ 	color:white;
+ 	font-size: 30px;
+ }	
+
+
+
+ 
+
+ /*product*/	
+
  .imgcart{
  	width: 50%;
  }
@@ -48,29 +53,53 @@ body {
 
  .product{
  	text-align: center;
+ } 
+
+
+/*form*/
+
+
+ .formInput,select{
+ 	border: none;
+ 	border-bottom: 2px solid black;
+ 	width: 160px;
  }
- 
- .home{
- 	width: 50%;
- 	height: 100%;
+ form{
+ 	font-family: georgia;
+ 	margin-top: 10px
+ 	margin-bottom: 10px;
+ 	line-height: 1.5;
  }
 
- .fa{
- 	color:white;
- 	font-size: 30px;
- }
+ 
+
 
  /*Navbar*/
  .nav ,.navbar{
  	font-family: sans-serif;
+ 	padding-bottom: 2px;
+ 	background-color: black;
+
+ }
+
+ .dropdown-menu a:hover{
+ 	background-color: black;
+ 	color: white;
+
+ }
+
+ .nav-link a{
+ 	color: white;
  }
  
 
  .nav-link:hover{
     
     background-color: transparent;
-    border-bottom: 5px solid black;
+    border-bottom: 4px solid white;
+    padding-bottom: 3px;
 }
+
 
 #filtersubmit {
 	    		position: relative;
@@ -82,11 +111,20 @@ body {
 	    		width: 0;
 }
 
+
+ /*main*/
+
+ main{
+ 	margin-bottom: 10px;
+ }
+
+
 /*Footer*/
 
 .footer {
 
 			flex-shrink: 0;
+			background-color: black;
 			
 		
 		}
