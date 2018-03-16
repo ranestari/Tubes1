@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Cart</title>
+	<title>Keranjang</title>
 	<!-- Bootstrap CSS Library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- CSS Style -->
@@ -13,58 +13,59 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Data Table Plugin -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.16/api/sum().js"></script>
+
+	<style type="text/css">
+		body{
+			height: 100%;
+			width: 100%;
+		}
+		.imgcart {
+			height: 150px;
+		}
+	</style>
+
 </head>
 <body>
-	<header>
-	<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
-		<a class="navbar-brand" href="">C.W</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbar">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item">
-					<a class="nav-link" href="home.html">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="topsWear.html">Tops Wear</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="bottomsWear.html">Bottoms Wear</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="konfirmasiPembayaran.html">Payment Confirmation</a>
-				</li>
-			</ul>
-
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search"><i id="filtersubmit" class="fa fa-search"></i>
-			</form>
-			<a  class="nav-link nav-item active" aria-label="Cart" href="keranjang.html"><i class="fa fa-cart-plus"></i>
+	
+		<header>
+		<nav class="navbar navbar-expand navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="img/logo.png" width="30" height="30" alt="">
 			</a>
-			<ul class="navbar-nav">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"></i>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarAccount" >
-					<a class="dropdown-item" href="">Profil</a>
-					<a class="dropdown-item" href="">Setting</a>
-					<a class="dropdown-item" href="">SignOut</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-						
-					</div>
-				</li>
-			</ul>
-			
+			<div class="collapse navbar-collapse" id="navbar1">
 
-		</div>
-	</nav>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Products</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Tops</a>
+							<a class="dropdown-item" href="#">Bottoms</a>
+						</div>
+					</li>
+				</ul>
+				
+				<form class="form-inline my-2 my-md-0" action="/action_page.php" method="GET">
+					<input class="form-control" type="text" placeholder="Search"/><i id="filtersubmit" class="fa fa-search"></i>
+				</form>
+				<button type="button" class="btn btn-dark" aria-label="Cart">
+					<i class="fa fa-cart-plus"></i>
+				</button>
+			</div>
+		</nav>
 	</header>
 
-	
-
-		<main role="main" class="container-fluid flex-grow content">
+	<main role="main" class="container-fluid flex-grow content">
 		<div class="row align-items-center">
 			<div class="col-lg my-2" id="barang">
 				<table id="catalogTable" width="100%" cellspacing="0">
@@ -79,8 +80,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><img class="img" src="img/joggerpants.jpg"></td>
+						<!-- <tr>
+							<td><img class="imgcart" src="img/joggerpants.jpg"></td>
 							<td class="name"></td>
 							<td class="price"></td>
 							<td>
@@ -92,7 +93,7 @@
 							<td><button class="deleteRow"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
-							<td><img class="img" src="img/jeans.jpg"></td>
+							<td><img class="imgcart" src="img/jeans.jpg"></td>
 							<td class="name"><p id="name0"></p></td>
 							<td class="price"><p id="price0"></p></td>
 							<td>
@@ -102,7 +103,7 @@
 							</td>
 							<td class="subtotal"></td>
 							<td><button class="deleteRow"><i class="fa fa-trash"></i></button></td>
-						</tr>
+						</tr> -->
 					</tbody>
 					<tfoot>
 						<!-- <tr>
@@ -110,69 +111,28 @@
 							<th></th>
 							<th></th>
 						</tr> -->
-						<tr>
-							<th colspan="5" style="text-align:right"><a href="formDataDiri.html"><button type="button"  class="btn btn-default">Pay<i class="fa fa-cart-plus"></i></button></a></th>
-							<th></th>
-							<th></th>
-						</tr>
 					</tfoot>
 				</table>
-
-				
 			</div>
 		</div>
 				
-	
 	</main>
 
-	
-
-	<div class="footer" id="footer">
+	<footer class="bg-dark text-white">
 		<div class="container-fluid">
 			<div class="row">
-			<div class="col-lg-4 mr-auto">
-					
-				<div class="row footerTitle">
-				<ul>
-					<li><div class="footerTitle"><a href="#">About</a></div></li>
-					<li><div class="footerTitle"><a href="#">Help</a></div></li>
-					<li><div class="footerTitle"><a href="#">Location</a></div></li>	
-					<li><div class="footerTitle"><a href="#">Setting</a></div></li>		
-				</ul>
-					
-				</div>	
-			</div>
-			<div class="col-lg-4">
-				<div class="row socialMedia">
-					<div class="socialMedia"><a href="#"><i class="fa fa-facebook"></i></a></div>
-					<div class="socialMedia"><a href="#"> <i class="fa fa-twitter"></i></a></div>
-					<div class="socialMedia"><a href="#"> <i class="fa fa-youtube"></i></a></div>
-					<div class="socialMedia"><a href="#"> <i class="fa fa-instagram"> </i></a></div>
-				</div>
-				<div class="row">
-					<form style="padding-top: 10px;" class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Email" aria-label="Email">
-					<button class="btn btnSubscribe  my-2 my-sm-0" type="submit">Subscribe</button>
-					</form>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="row location">
-					<iframe class="my-2 my-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63362.88742285097!2d107.63341669154154!3d-6.988012507618791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2753c544847%3A0x401e8f1fc28c6f0!2sBojongsoang%2C+Bandung%2C+Jawa+Barat!5e0!3m2!1sid!2sid!4v1521121459949" width="350" height="170" frameborder="150" style="border:0" allowfullscreen></iframe>
-				</div>
-			</div>
-			</div>
-			<div class="">
-				<div class="copyright">
-					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-						<center><p>Copyright &copy; 2018 &bull; All Right Reserved Design by Our Team</p></center>
-				</div>
-					
+					<div class="col">
+						<nav class="nav">
+  						<a class="nav-link text-white" href="#">About</a>
+  						<a class="nav-link text-white" href="#">Contact</a>
+  						<a class="nav-link text-white" href="#">Help</a>
+            			</nav>
+					</div>
 			</div>
 		</div>
-		</div>
+	</footer>
 
-		<script>
+	<script>
 		$(document).ready(function() {
 			var table = $('#catalogTable').DataTable( {
 				ajax: "data.json",
@@ -232,6 +192,5 @@
 
 		} );
 	</script>
-
 </body>
 </html>

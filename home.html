@@ -5,120 +5,283 @@
 	<!-- Bootstrap CSS Library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- CSS Style -->
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
 	<!-- Bootstrap JS Library -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $(".owl-carousel").owlCarousel();
+		}); 
+	</script>
+
 	<style type="text/css">
-		html, body {
-			height: 100%;
+		/* quick reset and base styles */
+		* {
+		  margin: 0;
+		  padding: 0;
+		  border: 0;
 		}
-		body {
-			display: flex;
-			flex-direction: column;
+
+		html {
+		  font-family: helvetica, arial, sans-serif;
 		}
-		.content {
-			flex: 1 0 auto;
+
+		body{
+			width: 100%;
 		}
-		.footer {
-			flex-shrink: 0;
+
+		/* relevant styles */
+		.img__wrap {
+		  position: relative;
 		}
-		#filtersubmit {
-			position: relative;
-			z-index: 1;
-			left: -25px;
-			top: 1px;
-			color: #7B7B7B;
-			cursor:pointer;
-			width: 0;
+
+		.img__description_layer {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  color: #fff;
+		  visibility: hidden;
+		  opacity: 0;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+
+		  /* transition effect. not necessary */
+		  transition: opacity 1s, visibility 1s;
 		}
+
+		.col:hover .img__description_layer{
+		  visibility: visible;
+		  opacity: 1;
+		  margin: auto;	
+		}
+
+		 .col:hover .img__description_layer p:hover{
+		 	filter: grayscale(100%);
+		 }
+
+		.img__description {
+		  transition: .2s;
+		  transform: translateY(1em);
+		  font-size: 40px;
+		  filter: grayscale(100%);
+		  position: absolute;
+		}
+
+		.img__wrap:hover .img__description {
+		  transform: translateY(0);
+		}
+
+		#navbar1{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		#sliderSatu{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		
+		#welcome-screen a {
+			color:white;
+			text-decoration: none;
+			opacity:1;
+			z-index:1000;
+		}
+		#welcome-screen img:hover, #welcome-screen a:hover img {
+			filter: grayscale(100%);
+		}
+
+		#welcome-screen .blocky {
+			display: block;
+			background-color: #000;
+			width: 100%;
+			height:100%;
+			opacity:0.3;
+			z-index:1000;
+		}
+
+		.card {
+			border-radius:0 !important;
+			border:0;
+		}
+
 	</style>
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">
-				<img src="img/logo.png" width="30" height="30" alt="">
+	<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+		<a class="navbar-brand" href="">C.W</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="topsWear.html">Tops Wear</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="bottomsWear.html">Bottoms Wear</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="konfirmasiPembayaran.html">Payment Confirmation</a>
+				</li>
+			</ul>
+
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search"><i id="filtersubmit" class="fa fa-search"></i>
+			</form>
+			<a  class="nav-link nav-item" aria-label="Cart" href="keranjang.html"><i class="fa fa-cart-plus"></i>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"></i>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarAccount" >
+					<a class="dropdown-item" href="">Profil</a>
+					<a class="dropdown-item" href="">Setting</a>
+					<a class="dropdown-item" href="">SignOut</a>
 
-			<div class="collapse navbar-collapse" id="navbar1">
+						
+					</div>
+				</li>
+			</ul>
+			
 
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Products</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Tops</a>
-							<a class="dropdown-item" href="#">Bottoms</a>
-						</div>
-					</li>
-				</ul>
-				
-				<form class="form-inline my-2 my-md-0" action="/action_page.php" method="GET">
-					<input class="form-control" type="text" placeholder="Search"/><i id="filtersubmit" class="fa fa-search"></i>
-				</form>
-				<button type="button" class="btn btn-dark" aria-label="Cart">
-					<i class="fa fa-cart-plus"></i>
-				</button>
-			</div>
-		</nav>
+		</div>
+	</nav>
 	</header>
 	
 	<main role="main" class="container-fluid flex-grow content">
-		<p></p>
-		<div class="row justify-content-md-center">
-			<div class="col-lg-8">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img class="d-block w-100 home" src="img/home1.jpg" alt="First slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100 home" src="img/home2.jpg" alt="Second slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100 home" src="img/home3.jpg" alt="Third slide">
-						</div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
+	<div id="welcome-screen">
+		<div class="row no-gutters">
+			<div class="col justify-content-center" id="gambarSatu">
+				  <img class="" src="woman.jpg" style="width: 100%" />
+				  <div class="img__description_layer">
+				  	<div class="blocky"></div>
+				    <a href="topsWear.html" class="img__description">Tops</a>
+				  </div>
+		    </div>
+		    <div class="col justify-content-center" id="gambarSatu">
+		    	<img class="img__img" src="man.jpg" style="width: 100%" />
+				  <div class="img__description_layer">
+				  	<div class="blocky"></div>
+				    <a href="bottomsWear.html" class="img__description">Bottoms</a>
+				  </div>
+		    </div>
+		</div>
+		</div>
+	
+			<div class="top-product" style="text-align: center; font-size: 24px;margin-top: 10px;">
+       			<p>TOP PRODUCT</p>
+       		</div>
+        <div class="owl-carousel" style="height: 100%" id="sliderSatu">
+		  <div> <img src="img/celana1.jpg"> </div>
+		  <div> <img src="img/celana2.jpg"> </div>
+		  <div> <img src="img/celana3.jpg"> </div>
+		  <div> <img src="img/cowo1.jpg"> </div>
+		  <div> <img src="img/cowo2.jpg"> </div>
+		  <div> <img src="img/cowo3.jpg"> </div>
+		</div>
+
+		<div class="top-highlight" style="text-align: center; font-size: 24px;">
+       		<p>HIGHLIGHT</p>
+       		</div>
+		<div class="row no-gutters" id="jarakCard">
+        <div class="col-md">
+          <div class="card">
+            <div class="card-body">
+            	<h5 class="card-title"><img src="img/suit1.jpg" style="width: 100%"></h5>
+               	<center>
+               		<p class="card-text">Formal</p>
+               	</center>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card">
+            <div class="card-body">
+            	<h5 class="card-title"><img src="img/outer1.jpg" style="width: 100%"></h5>
+               	<center>
+               		<p class="card-text">Casual</p>
+               	</center>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card">
+            <div class="card-body">
+            	<h5 class="card-title"><img src="img/joggerpants.jpg" style="width: 100%"></h5>
+               	<center>
+               		<p class="card-text">Sport</p>
+               	</center>
+            </div>
+          </div>
+        </div>
+        </div>
+        </main>
+		
+
+
+	<div class="footer" id="footer">
+		<div class="container-fluid">
+			<div class="row">
+			<div class="col-lg-4 mr-auto">
+					
+				<div class="row footerTitle">
+				<ul>
+					<li><div class="footerTitle"><a href="#">About</a></div></li>
+					<li><div class="footerTitle"><a href="#">Help</a></div></li>
+					<li><div class="footerTitle"><a href="#">Location</a></div></li>	
+					<li><div class="footerTitle"><a href="#">Setting</a></div></li>		
+				</ul>
+					
+				</div>	
+			</div>
+			<div class="col-lg-4">
+				<div class="row socialMedia">
+					<div class="socialMedia"><a href="#"><i class="fa fa-facebook"></i></a></div>
+					<div class="socialMedia"><a href="#"> <i class="fa fa-twitter"></i></a></div>
+					<div class="socialMedia"><a href="#"> <i class="fa fa-youtube"></i></a></div>
+					<div class="socialMedia"><a href="#"> <i class="fa fa-instagram"> </i></a></div>
+				</div>
+				<div class="row">
+					<form style="padding-top: 10px;" class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Email" aria-label="Email">
+					<button class="btn btnSubscribe  my-2 my-sm-0" type="submit">Subscribe</button>
+					</form>
 				</div>
 			</div>
+			<div class="col-lg-4">
+				<div class="row location">
+					<iframe class="my-2 my-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63362.88742285097!2d107.63341669154154!3d-6.988012507618791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2753c544847%3A0x401e8f1fc28c6f0!2sBojongsoang%2C+Bandung%2C+Jawa+Barat!5e0!3m2!1sid!2sid!4v1521121459949" width="350" height="170" frameborder="150" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+			</div>
+			<div class="">
+				<div class="copyright">
+					<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+						<center><p>Copyright &copy; 2018 &bull; All Right Reserved Design by Our Team</p></center>
+				</div>
+					
+			</div>
 		</div>
-	</main>
-
-	<footer class="bg-dark text-white">
-		<div class="container-fluid">
-	        <div class="row">
-	            <div class="col">
-	            	<nav class="nav">
-						<a class="nav-link text-white" href="#">About</a>
-						<a class="nav-link text-white" href="#">Contact</a>
-						<a class="nav-link text-white" href="#">Help</a>
-					</nav>
-	            </div>
-	        </div>
-	    </div>
-	</footer>
+		</div>
 </body>
-</html>
+</html>	

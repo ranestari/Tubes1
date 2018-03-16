@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Detail Produk</title>
+	<title>Bottoms Wear</title>
 	<!-- Bootstrap CSS Library -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- CSS Style -->
@@ -13,9 +13,32 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		html, body {
+			height: 100%;
+		}
+		body {
+			display: flex;
+			flex-direction: column;
+		}
+		.content {
+			flex: 1 0 auto;
+		}
+		.footer {
+			flex-shrink: 0;
+		}
+		#filtersubmit {
+	    		position: relative;
+	    		z-index: 1;
+	    		left: -25px;
+	    		top: 1px;
+	    		color: #7B7B7B;
+	    		cursor:pointer;
+	    		width: 0;
+		}
+	</style>
 </head>
 <body>
-
 	<header>
 	<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
 		<a class="navbar-brand" href="">C.W</a>
@@ -31,7 +54,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="topsWear.html">Tops Wear</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item active">
 					<a class="nav-link" href="bottomsWear.html">Bottoms Wear</a>
 				</li>
 				<li class="nav-item">
@@ -62,35 +85,95 @@
 		</div>
 	</nav>
 	</header>
-
-	<main>
-		<div class="container">
-		<div  id="detailbarang">
-			<div class="row">
-				<div class="col-md-5">
-					<img class=" container-fluid imgDetail" src="img/joggerpants.jpg">
-				</div>
-				<div class="col-md-7">
-					<div class="col-md keterangan">	
-						<h3>Jogger Pants</h3>
-						<h4 class="tab">IDR 100,000.00</h4>
-						<p class="tab">Material: cotton</p>
-						<p class="tab"> Size: (S / M / L)</p>
-						<p class="tab"> Waist / Lingkar Pinggang 68-75 / 70-77 / 75 - 82<br>
-							Hip / Lingkar Panggul 96 / 102 / 108<br>
-							Thigh / Lingkar Paha 58 / 62 / 66<br>
-							Length / Panjang 95 / 97 / 99<br>
-						</p>
-					</div>
-					<div class="col-md">
-
-						<a href="keranjang.html"><button type="button"  class="btn btn-default">Add to Cart  <i class="fa fa-cart-plus"></i></button>	</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
 	
+	<main role="main" class="container-fluid flex-grow content product">
+		<div class="container">
+  			<h2>Bottoms</h2>
+  
+  
+  			<div class="row">
+    			<div class="col-md-4">
+      				<div class="thumbnail">
+        				<a href="detailProduk.html" >
+          				<img class="imgProduct" src="img/joggerpants.jpg" alt="jogger">
+          <div class="caption">
+            <p>Jogger Pants</p>
+            <p>Rp.75,000.00</p>
+          </div>
+        </a>
+        <a href="keranjang.html" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/chinopants.jpg" target="_blank">
+          <img class="imgProduct" src="img/celana1.jpg" alt="chino">
+          <div class="caption">
+            <p>Chino Pants</p>
+            <p>Rp.150,000.00</p>
+          </div>
+        </a>
+        <a href="" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/jeans.jpg" target="_blank">
+          <img class="imgProduct" src="img/celana2.jpg" alt="jeans" >
+          <div class="caption">
+            <p>Jeans</p>
+            <p>Rp.200,000.00</p>
+          </div>
+        </a>
+        <a href="" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+
+	<div class="row">
+    			<div class="col-md-4">
+      				<div class="thumbnail">
+        				<a href="img/joggerpants.jpg" target="_blank">
+          				<img class="imgProduct" src="img/celana3.jpg" alt="jogger">
+          <div class="caption">
+            <p>Jogger Pants</p>
+            <p>Rp.75,000.00</p>
+          </div>
+        </a>
+        <a href="" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/chinopants.jpg" target="_blank">
+          <img class="imgProduct" src="img/celana4.jpg" alt="chino">
+          <div class="caption">
+            <p>Chino Pants</p>
+            <p>Rp.150,000.00</p>
+          </div>
+        </a>
+        <a href="" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="img/jeans.jpg" target="_blank">
+          <img class="imgProduct" src="img/celana5.jpg" alt="jeans" >
+          <div class="caption">
+            <p>Jeans</p>
+            <p>Rp.200,000.00</p>
+          </div>
+        </a>
+        <a href="" type="button" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+	</main>
+
 	<div class="footer" id="footer">
 		<div class="container-fluid">
 			<div class="row">
@@ -138,6 +221,3 @@
 
 </body>
 </html>
-
-<!-- 
- -->

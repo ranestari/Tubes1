@@ -1,0 +1,7 @@
+{
+  "data": [
+    ["<img class='imgcart' src='jeans.jpg'>","Jeans",99000,1,"","<button class='deleteRow'><i class='fa fa-trash'></i></button>"],
+    ["<img class='imgcart' src='chinopants.jpg'>", "Chino", 89000, 2, "", "<button class='deleteRow'><i class='fa fa-trash'></i></button>"],
+    ["<img class='imgcart' src='joggerpants.jpg'>", "JoggerPants", 84900, 1, "", "<button class='deleteRow'><i class='fa fa-trash'></i></button>"]
+  ]
+}
